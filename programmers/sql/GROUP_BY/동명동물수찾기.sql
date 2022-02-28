@@ -1,0 +1,1 @@
+select NAME, count(NAME) from ANIMAL_INS GROUP BY NAME HAVING count(NAME) > 1 ORDER BY NAME;
