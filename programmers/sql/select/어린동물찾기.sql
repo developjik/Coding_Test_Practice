@@ -1,0 +1,1 @@
+select ANIMAL_ID, Name from ANIMAL_INS WHERE INTAKE_CONDITION != 'Aged';
