@@ -1,13 +1,9 @@
 from sys import stdin
-
 input = stdin.readline
 
 K, N = map(int, input().split())
 
-lan = []
-
-for _ in range(K):
-    lan.append(int(input()))
+lan = [int(input()) for _ in range(K)]
 
 start = 1
 end = max(lan)

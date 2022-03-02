@@ -31,4 +31,4 @@ for i in range(len(M)):
     if M[i] not in ans:
         ans[M[i]] = (binarySearch(M[i], N, start, end))
 
-print(' '.join(str(ans[x]) if x in ans else '0' for x in M))
+print(*[ans[i] for i in M])

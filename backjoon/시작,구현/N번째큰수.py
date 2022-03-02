@@ -1,6 +1,4 @@
-t = int(input())
-
-for _ in range(t):
+for _ in range(int(input())):
     g = list(map(int, input().split()))
     g.sort()
 

@@ -1,8 +1,3 @@
-n = int(input())
-
-g = map(int, input().split())
-
-
 def number(x):
     if x == 1:
         return False
@@ -13,9 +8,7 @@ def number(x):
 
     return True
 
+n = int(input())
+g = [ i for i in map(int, input().split()) if number(i) ]
 
-count = 0
-for i in g:
-    if number(i):
-        count += 1
-print(count)
+print(len(g))

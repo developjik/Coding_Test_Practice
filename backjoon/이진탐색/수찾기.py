@@ -5,7 +5,6 @@ N_L.sort()
 M = int(input())
 M_L = list(map(int, input().split()))
 
-
 def binarySearch(target, N_L):
     start = 0
     end = len(N_L)-1
@@ -22,8 +21,8 @@ def binarySearch(target, N_L):
             end = mid-1
 
     print(0)
+    
     return
-
 
 for i in range(M):
     binarySearch(M_L[i], N_L)

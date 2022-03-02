@@ -12,7 +12,6 @@ def number(x):
 
     return True
 
-
 ans = []
 for i in range(m, n+1):
     if number(i):

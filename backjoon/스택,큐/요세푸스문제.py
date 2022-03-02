@@ -1,7 +1,4 @@
-import sys
 from collections import deque
-
-input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
@@ -10,6 +7,7 @@ ans = []
 
 while len(deq) != 0:
     deq.rotate(len(deq) - m)
+    print(deq)
     ans.append(str(deq.pop()))
 
 print("<", ", ".join(ans), ">", sep='')

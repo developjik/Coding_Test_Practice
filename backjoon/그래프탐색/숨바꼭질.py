@@ -1,7 +1,4 @@
 from collections import deque
-from sys import stdin
-
-input = stdin.readline
 
 n, k = map(int, input().split())
 max = 100000
