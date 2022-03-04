@@ -1,14 +1,4 @@
-# from itertools import combinations
-
-# while True:
-#     k, *s = map(int, input().split())
-
-#     if k == 0:
-#         break
-
-#     for i in list(combinations(s, 6)):
-#         print(*i)
-#     print()
+# s
 
 import sys
 sys.setrecursionlimit(10 ** 5)

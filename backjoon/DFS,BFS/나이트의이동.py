@@ -1,6 +1,5 @@
 from collections import deque
 
-
 def bfs(target_x, target_y):
     while(q):
         x, y = q.popleft()
@@ -20,9 +19,9 @@ def bfs(target_x, target_y):
 dx = [1, 2, 2, 1, -1, -2, -2, -1]
 dy = [-2, -1, 1, 2, 2, 1, -1, -2]
 
-n = int(input())
+t = int(input())
 
-for _ in range(n):
+for _ in range(t):
 
     l = int(input())
 

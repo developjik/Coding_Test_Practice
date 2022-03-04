@@ -1,0 +1,1 @@
+print(list(set(map(tuple, [[1, 2], [1, 2], [1]]))))

@@ -1,5 +1,7 @@
+from sys import stdin
 from collections import deque
 
+input = stdin.readline
 
 def dfs(v):
     visit_list[v] = 1

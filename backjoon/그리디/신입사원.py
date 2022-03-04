@@ -1,6 +1,7 @@
 from sys import stdin, stdout
+input = stdin.readline
 
-T = int(stdin.readline())
+T = int(input())
 
 for i in range(T):
     n = int(input())

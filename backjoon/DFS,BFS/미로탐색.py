@@ -1,12 +1,13 @@
 from collections import deque
 
-n, m = map(int, input().split())
+dx , dy = [0, 0, -1, 1], [1, -1, 0, 0]
 
+n, m = map(int, input().split())
 matrix = [list(input()) for _ in range(n)]
+
 v = [[0]*m for _ in range(n)]
 v[0][0] = 1
 
-dx , dy = [0, 0, -1, 1], [1, -1, 0, 0]
 q = deque()
 q.append((0, 0))
 

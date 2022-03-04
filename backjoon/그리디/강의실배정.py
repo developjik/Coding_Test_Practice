@@ -1,11 +1,8 @@
-from sys import stdin
 import heapq
-
-input = stdin.readline
 heap = []
 
 arr = [list(map(int, input().split())) for _ in range(int(input()))]
-arr.sort(key= lambda x:(x[0], x[1]))
+arr.sort(key=lambda x: (x[0], x[1]))
 
 for i in arr:
     if heap and heap[0] <= i[0]:

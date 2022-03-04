@@ -1,20 +1,20 @@
 from collections import deque
+from sys import stdin
+
+input = stdin.readline
 
 m, n = map(int, input().split())
-
-g = []
-q = deque()
+g = [list(map(int, input().split())) for _ in range(n)]
 
 dx = [0, 0, -1, 1]
 dy = [-1, 1, 0, 0]
 
-for i in range(n):
-    g.append(list(map(int, input().split())))
+q = deque()
 
+for i in range(n):
     for j in range(m):
         if g[i][j] == 1:
             q.append((i, j))
-
 
 def bfs():
     while(q):
@@ -27,7 +27,6 @@ def bfs():
             if 0 <= nx < n and 0 <= ny < m and g[nx][ny] == 0:
                 q.append((nx, ny))
                 g[nx][ny] = g[x][y] + 1
-
 
 bfs()
 

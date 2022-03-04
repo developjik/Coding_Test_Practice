@@ -1,12 +1,13 @@
-n, k = map(int, input().split())
-g = [int(input()) for _ in range(n)]
+from sys import stdin
+input = stdin.readline
 
-dp = [0 for _ in range(k+1)]
-dp[0] = 1
+N, K = map(int, input().split())
 
-for i in g:
-    for j in range(1, k+1):
-        if j - i >= 0:
-            dp[j] += dp[j-i]
+N = [int(input()) for i in range(N)]
 
-print(dp[-1])
+count = 0
+for i in range(len(N)-1, -1, -1):
+    count += K // N[i]
+    K = K % N[i]
+
+print(count)
