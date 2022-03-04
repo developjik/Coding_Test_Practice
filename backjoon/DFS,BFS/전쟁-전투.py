@@ -10,15 +10,14 @@ v = [[0] * n for _ in range(m)]
 res_w = 0
 res_b = 0
 
-
-def bfs(i, j, cnt, key):
+def bfs(i, j, count, key):
     q = deque()
     g[i][j] = 0
     q.append((i, j))
-    cnt += 1
 
     while q:
         x, y = q.popleft()
+        count+=1
 
         for k in range(4):
             nx = x + dx[k]
@@ -27,9 +26,8 @@ def bfs(i, j, cnt, key):
             if 0 <= nx < m and 0 <= ny < n and g[nx][ny] == key:
                 g[nx][ny] = 0
                 q.append((nx, ny))
-                cnt += 1
 
-    return cnt
+    return count
 
 
 for i in range(m):

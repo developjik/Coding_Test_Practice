@@ -12,10 +12,11 @@ def bfs(i, j):
     q = deque()
     q.append((i, j))
     g[i][j] = '0'
-    count = 1
+    count = 0
 
     while q:
         x, y = q.popleft()
+        count += 1
 
         for i in range(4):
             nx = x + dx[i]
@@ -24,7 +25,6 @@ def bfs(i, j):
             if 0 <= nx < len(g) and 0 <= ny < len(g) and g[nx][ny] == '1':
                 g[nx][ny] = '0'
                 q.append((nx, ny))
-                count += 1
 
     return count
 
